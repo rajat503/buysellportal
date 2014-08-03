@@ -18,10 +18,14 @@
 						$serial=mysql_result($query_run,$a,'serial');
 						echo mysql_result($query_run,$a,'title').'<br/>';
 						echo mysql_result($query_run,$a,'status').'<br/>';
-						echo '<a href="sell.php?link=' . $serial . '""> Mark as sold </a>';
-						echo '<br/>'.'<br/>';
-
+						echo '<a href="sell.php?link=' . $serial . '""> Mark as sold/Remove </a>';
+						echo '<br/>';
 					}
+					if(mysql_result($query_run,$a,'status')=='Archived')
+					{
+						echo '<a href="unarchive.php?link=' . $serial . '""> Unarchive </a>';
+					}
+					echo '<br/>'.'<br/>';
 				}
 			}
 			else

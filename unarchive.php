@@ -5,10 +5,10 @@
 	$query="SELECT * FROM `items` WHERE `serial`='$serial'";
 	if($query_run=mysql_query($query))
 	{
-		$query1="UPDATE `items` SET `status`='Sold' WHERE `serial`='$serial'";
+		$query1="UPDATE `items` SET `status`='No Response' WHERE `serial`='$serial'";
 		if($query_run1=mysql_query($query1))
 		{
-			echo "Book removed.";
+			echo "Unarchived.";
 		}
 		else
 		{
