@@ -18,15 +18,16 @@ if(isset($_POST['category']))
 			{
 				if(mysql_result($query_run,$a,'status')=='No Response')
 				{
+					$serial=mysql_result($query_run,$a,'serial');
 					echo mysql_result($query_run,$a,'title').'<br/>';
 					echo mysql_result($query_run,$a,'details').'<br/>';
 					echo mysql_result($query_run,$a,'price').'<br/>';
 					echo mysql_result($query_run,$a,'negotiation').'<br/>';
 					echo mysql_result($query_run,$a,'time').'<br/>';
 					echo mysql_result($query_run,$a,'name').'<br/>';
-					echo mysql_result($query_run,$a,'hotsel').'<br/>';
+					echo mysql_result($query_run,$a,'hostel').'<br/>';
 					echo mysql_result($query_run,$a,'room').'<br/>';
-					echo mysql_result($query_run,$a,'contact').'<br/>';
+					echo '<a href="buy.php?link=' . $serial . '""> Buy </a>';
 				}
 			}
 

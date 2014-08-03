@@ -18,7 +18,7 @@ if(isset($_POST['title']) && isset($_POST['details']) && isset($_POST['price']) 
 		$user_room=$_SESSION['user_room'];
 		$status='No Response';
 		$today = date("Y-m-d H:i:s");
-		$query="INSERT INTO `items` VALUES ('".$user_id."','".$user_name."','".$user_hostel."','".$user_room."','".$user_contact."','".$title."','".$details."','".$price."','".$negotiation."','".$category."','".$status."','".$today."')";
+		$query="INSERT INTO `items` VALUES ('','".$user_id."','".$user_name."','".$user_hostel."','".$user_room."','".$user_contact."','".$title."','".$details."','".$price."','".$negotiation."','".$category."','".$status."','".$today."')";
 		if($query_run=mysql_query($query))
 		{
 			header('Location: userhome.php');
