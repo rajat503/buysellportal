@@ -23,6 +23,12 @@ if(isset($_POST['id']) && isset($_POST['password']))
 				$_SESSION['user_id']=$user_id;
 				$user_name=mysql_result($query_run,0,'name');
 				$_SESSION['user_name']=$user_name;
+				$user_contact=mysql_result($query_run,0,'contact');
+				$_SESSION['user_contact']=$user_contact;
+				$user_hostel=mysql_result($query_run,0,'hostel');
+				$_SESSION['user_hostel']=$user_hostel;
+				$user_room=mysql_result($query_run,0,'room');
+				$_SESSION['user_room']=$user_room;
 
 				header('Location: index.php');
 			}
