@@ -16,7 +16,7 @@ if(isset($_POST['category']))
 			 }
 			for($a=0;$a<$query_num_rows;$a++)
 			{
-				if(mysql_result($query_run,$a,'status')=='No Response')
+				if(mysql_result($query_run,$a,'status')=='No Response' || mysql_result($query_run,$a,'status')=='Archived')
 				{
 					$serial=mysql_result($query_run,$a,'serial');
 					echo mysql_result($query_run,$a,'title').'<br/>';
